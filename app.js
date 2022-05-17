@@ -3,6 +3,8 @@ const app = express();
 const connectDB = require("./db/connect");
 const notFound = require("./middleware/not-found")
 const errorHandler = require("./middleware/error-Handler")
+const cacheRoutes = require('./routes/cache')
+
 
 
 const PORT = process.env.PORT || 3000
@@ -10,6 +12,8 @@ const PORT = process.env.PORT || 3000
 app.use(express.json());
  
 
+//routes
+app.use('/api/v1/cache',cacheRoutes)
 
 
 app.use(notFound)
