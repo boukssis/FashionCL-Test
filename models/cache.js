@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const randomStringGenerator = require("../helpers/randomStringGenerator");
 
 
 const cacheSchema = new mongoose.Schema({
@@ -10,6 +11,7 @@ key:{
 
 data:{
     type:String,
+    default:randomStringGenerator(),
     required:true
 },
 
@@ -19,7 +21,8 @@ ttl:{
 },
 
 createdAt:{
-    type:Number
+    type:Number,
+    default: Date.now
 }
 
 
