@@ -29,7 +29,8 @@ Run the tests
 The tests run in a different database, not modifying the main one (testing env).
 
 
-# Instructions
+# Instructions and infos
+###### Node version : v16.13.2
 ###### Use postman to test this API
 ###### In the config folder you can provide env variables such as mongoDB url and port, TTL, Max storage limit for both testing and developement environement
 
