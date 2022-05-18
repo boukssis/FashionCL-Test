@@ -104,7 +104,7 @@ exports.createOrUpdate = async (req, res, next) => {
           createdAt: new Date().getTime(),
         });
       }
-      res.status(200).json({ message: "Key added successfully", data: data });
+      res.status(201).json({ message: "Key added successfully", data: data });
     }
   } catch (error) {
     next(error);
